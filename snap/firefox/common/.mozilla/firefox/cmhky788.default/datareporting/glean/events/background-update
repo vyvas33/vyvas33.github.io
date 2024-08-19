@@ -1,0 +1,11 @@
+{"timestamp":4950164,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","experiment":"add-an-image-to-pdf-with-alt-text-rollout","branch":"control","glean_timestamp":"1724068277253"}}
+{"timestamp":4950176,"category":"nimbus_events","name":"enrollment","extra":{"glean_timestamp":"1724068277265","experiment":"csv-import-release-rollout","branch":"enable-csv-import","experiment_type":"rollout"}}
+{"timestamp":4950180,"category":"nimbus_events","name":"enrollment","extra":{"glean_timestamp":"1724068277269","experiment":"ech-roll-out","experiment_type":"rollout","branch":"rollout"}}
+{"timestamp":4950215,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","branch":"treatment","glean_timestamp":"1724068277303","experiment":"upgrade-spotlight-rollout"}}
+{"timestamp":4950224,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"phc-rollout","branch":"rollout","experiment_type":"rollout","glean_timestamp":"1724068277313"}}
+{"timestamp":4950231,"category":"nimbus_events","name":"enrollment","extra":{"branch":"treatment","experiment_type":"rollout","experiment":"highlighting-in-pdfs-rollout","glean_timestamp":"1724068277319"}}
+{"timestamp":4950235,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"consolidated-search-configuration-row-desktop-relaunch","experiment_type":"rollout","glean_timestamp":"1724068277324","branch":"rollout"}}
+{"timestamp":4950245,"category":"nimbus_events","name":"enrollment","extra":{"branch":"holdback","experiment":"long-term-holdback-2024-h2-velocity-desktop","experiment_type":"nimbus","glean_timestamp":"1724068277334"}}
+{"timestamp":4950335,"category":"nimbus_events","name":"enrollment","extra":{"glean_timestamp":"1724068277424","branch":"control","experiment":"disable-redirects-for-authretries","experiment_type":"rollout"}}
+{"timestamp":4950347,"category":"nimbus_events","name":"enrollment","extra":{"glean_timestamp":"1724068277436","experiment":"home-and-newtab-wallpapers-v2-rollout-global-relaunch","branch":"control","experiment_type":"rollout"}}
+{"timestamp":4950367,"category":"nimbus_events","name":"enrollment","extra":{"branch":"treatment-b","experiment":"recommend-media-extension-add-ons-part-2","glean_timestamp":"1724068277456","experiment_type":"nimbus"}}
