@@ -64,4 +64,3 @@ horizontal: false
 {% endif %}
 </div>
 
-
