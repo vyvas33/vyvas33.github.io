@@ -63,3 +63,12 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+
+
+{% include bib_search.liquid %}
+
+<div class="publications">
+
+{% bibliography %}
+
+</div>
