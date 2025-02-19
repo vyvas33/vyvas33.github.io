@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://vyvas33.github.io/al-folio/sitemap.xml
+User-agent: * Disallow: Sitemap: https://vyvas33.github.io/sitemap.xml
