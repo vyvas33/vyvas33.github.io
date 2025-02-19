@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Anand Vyvaswath Kalva
     - name: Date of Birth
-      value: 14th March 1879
+      value: 27th August 2002
     - name: Languages
-      value: English, German
+      value: English, Telugu, Hindi
 
 - title: Education
   type: time_table
