@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Researcher, Robotics Innovations Lab, Indian Institute of Science, Bengaluru
 
 profile:
   align: right
