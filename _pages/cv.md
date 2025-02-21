@@ -1,2 +1,8 @@
-<embed src="https://vyvaswath.com/assets/pdf/CV_Vyvaswath.pdf" type="application/pdf" width="100%" height="600px" />
+---
 
+permalink: /assets/pdf/CV_Vyvaswath.pdf
+title: CV
+nav: true
+nav_order: 5
+
+---
