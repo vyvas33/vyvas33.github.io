@@ -6,7 +6,7 @@ subtitle: Researcher, Robotics Innovations Lab, Indian Institute of Science, Ben
 
 profile:
   align: right
-  image: vyvaswath_pic.jpg
+  image: vyvaswath_pic2.jpg
   image_circular: true # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
