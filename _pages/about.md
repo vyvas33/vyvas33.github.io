@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About 
 permalink: /
 subtitle: Researcher, Robotics Innovations Lab, Indian Institute of Science, Bengaluru
 
