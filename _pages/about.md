@@ -2,7 +2,8 @@
 layout: about
 title: About 
 permalink: /
-subtitle: Researcher, Robotics Innovations Lab, Indian Institute of Science, Bengaluru
+subtitle: Incoming Grad Student | Mechanical Engineering - Research @ CMU
+
 
 profile:
   align: right
@@ -32,3 +33,5 @@ I’m now an incoming master’s student at [Carnegie Mellon University](https:/
 Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at  [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on everything from Fluid Mechanics to [Mechatronics](https://people.iiti.ac.in/~palaniia/), constantly pushing myself to learn and build cool things.
 
 As I move forward, I’m looking to dive deeper into robotics, exploring its many facets and figuring out where I can make the most impact.
+
+Outside of academics, I enjoy making and performing music, especially Indian fusion and progressive rock.

@@ -2,7 +2,7 @@
 layout: page
 title: An Articulated Robot for Complex and Confined Environments
 description: An inspection robot capable of in pipe and ground traversal.
-img: assets/img/isometric.png
+img: assets/img/isometric.jpg
 importance: 2
 category: work
 giscus_comments: false
