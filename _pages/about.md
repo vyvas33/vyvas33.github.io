@@ -26,7 +26,9 @@ social: true # includes social icons at the bottom of the page
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
+Hey! I’m Vyvaswath, a mechanical engineering graduate exploring the world of robotics.
+I’m now an incoming master’s student at [Carnegie Mellon University](https://www.cmu.edu/) and super excited to explore robotics and controls.
 
-Hey! I’m Vyvaswath, a mechanical engineering graduate exploring the world of robotics. Right now, at [Indian Institute of Science](https://iisc.ac.in), I’m working on a multimodal robot for ground and pipe inspection and I'm diving into design, mechanisms, and controls along the way.
+Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at  [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on everything from Fluid Mechanics to [Mechatronics](https://people.iiti.ac.in/~palaniia/), constantly pushing myself to learn and build cool things.
 
-I completed my undergraduate studies at [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on everything from Fluid Mechanics to [Mechatronics](https://people.iiti.ac.in/~palaniia/), constantly pushing myself to learn and build cool things. Now, I’m looking to dive deeper into robotics, exploring its many facets and figuring out where I can make the most impact.
+As I move forward, I’m looking to dive deeper into robotics, exploring its many facets and figuring out where I can make the most impact.

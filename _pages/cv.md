@@ -1,7 +1,7 @@
 ---
 
-permalink: /assets/pdf/CV_Vyvaswath.pdf
-title: CV
+permalink: /assets/pdf/Resume.pdf
+title: Resume
 nav: true
 nav_order: 5
 
