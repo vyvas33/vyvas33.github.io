@@ -9,8 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-portfolio",
-          title: "Portfolio",
+  },{id: "nav-projects",
+          title: "projects",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -23,26 +23,31 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/Resume.pdf";
           },
-        },{id: "projects-gesture-controlled-sma-actuated-robotic-hand",
+        },{id: "projects-articulated-mobile-robot",
+          title: 'Articulated Mobile Robot',
+          description: "A modular center-articulated multi-modal robot for complex environments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/articulated_mobile_robot/";
+            },},{id: "projects-gesture-controlled-sma-actuated-robotic-hand",
           title: 'Gesture Controlled SMA Actuated Robotic Hand',
           description: "A robotic hand actuated by shape memory alloy springs and controlled using a gesture glove.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-an-articulated-robot-for-complex-and-confined-environments",
-          title: 'An Articulated Robot for Complex and Confined Environments',
-          description: "An inspection robot capable of in pipe and ground traversal.",
+              window.location.href = "/projects/gesture_controlled_sma_robotic_hand/";
+            },},{id: "projects-hopping-model",
+          title: 'Hopping Model',
+          description: "A hopping model with one muscle",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
+              window.location.href = "/projects/hopping_model/";
+            },},{id: "projects-muscle-model",
+          title: 'Muscle Model',
+          description: "An implementation of the Hill Type Muscle Model",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muscle_model/";
             },},{id: "projects-heat-transfer-characteristics-of-synthetic-jets",
           title: 'Heat Transfer Characteristics of Synthetic Jets',
           description: "An experimental study of elliptic synthetic jets with high aspect ratios",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-investigation-of-laser-soldering",
-          title: 'Investigation of Laser Soldering',
-          description: "Explored the use of lasers in soldering to improve efficiency and precision in the process.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project-copy/";
+              window.location.href = "/projects/synthetic_jets/";
             },},{
         id: 'social-email',
         title: 'email',
