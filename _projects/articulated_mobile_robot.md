@@ -1,11 +1,10 @@
 ---
 layout: page
-title: An Articulated Robot for Complex and Confined Environments
-description: An inspection robot capable of in pipe and ground traversal.
-img: assets/img/isometric.jpg
-importance: 2
+title: Articulated Mobile Robot
+description: A modular center-articulated multi-modal robot for complex environments
+importance: 3
 category: work
-giscus_comments: false
+github: vyvas33/articulated_mobile_robot
 ---
 
 <div class="row justify-content-sm-center">
@@ -17,7 +16,7 @@ giscus_comments: false
     Fabricated prototype of the robot
 </div>
 
-This inspection robot is designed to navigate both structured and unstructured environments with ease. Equipped with an articulated active joint, it offers precise steering control. Developed specifically for dual-mode operation, the robot seamlessly transitions between in-pipe and ground motion. To enhance stability on the ground, the robot features a configurable wheel distance mechanism that expands its support polygon. For in-pipe navigation, it employs a wall-press mechanism optimized to adapt to variations in pipe diameter. Additionally, its 2-DOF articulated joint enables both pitch and roll adjustments, allowing it to maneuver around obstacles within the pipe efficiently.
+A modular, center-articulated inspection robot developed for navigating both complex pipelines and ground environments. The robot features a 2-DoF joint for precise steering, a configurable wheel distance locomotion mechanism to enhance ground stability, and a wall-press mechanism optimized for varying pipe diameters. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -33,6 +32,3 @@ This inspection robot is designed to navigate both structured and unstructured e
 <div class="caption">
     The robot efficiently traversing in-pipe and on-ground environments.
 </div>
-
-
-

@@ -1,14 +1,13 @@
 ---
 layout: page
-title: Gesture Controlled SMA Actuated Robotic Hand 
+title: Gesture Controlled SMA Actuated Robotic Hand
 description: A robotic hand actuated by shape memory alloy springs and controlled using a gesture glove.
-img: assets/img/project1_handmodel.jpg
-importance: 1
+importance: 4
 category: work
-related_publications: false
+github: vyvas33/gesture_controlled_sma_robotic_hand
 ---
 
-This project aims to present an innovative interface between a Shape Memory Alloy (SMA)-based robotic hand and a glove equipped with flex sensors. SMAs are chosen as actuators as they have an excellent force-to-weight ratio and produce no noise. The Nickel-Titanium SMA has proven to be one of the most beneficial materials in actuation applications owing to its high power-to-weight ratio and high achievable actuation strains. The project’s human-machine interface (HMI) component utilizes a glove equipped with flex sensors. These sensors capture user gestures, and a machine learning algorithm interprets this data, enhancing gesture recognition accuracy. The classified gestures are then wirelessly transmitted to the robotic hand, forming a seamless link between user intent and robotic action.
+This project aims to present an interface between a Shape Memory Alloy (SMA)-based robotic hand and a glove equipped with flex sensors. SMAs are chosen as actuators as they have an excellent force-to-weight ratio and produce no noise. The Nickel-Titanium SMA has proven to be one of the most beneficial materials in actuation applications owing to its high power-to-weight ratio and high achievable actuation strains. The project utilizes a glove equipped with flex sensors. These sensors capture user gestures, and a machine learning algorithm interprets this data, enhancing gesture recognition accuracy. The classified gestures are then wirelessly transmitted to the robotic hand, forming a seamless link between user intent and robotic action.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-6 mt-3 mt-md-0">
@@ -36,7 +35,3 @@ This project aims to present an innovative interface between a Shape Memory Allo
 <div class="caption">
     The SMA actuated robotic hand actuating a tool.
 </div>
-
-
-
-

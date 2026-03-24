@@ -29,7 +29,7 @@ social: true # includes social icons at the bottom of the page
 ---
 Hey! I’m Vyvaswath, a mechanical engineering graduate student exploring the world of robotics and controls at [Carnegie Mellon University](https://www.cmu.edu/).
 
-I am working with the Legged Systems Group, advised by [Prof. Hartmut Geyer](https://www.cs.cmu.edu/~hgeyer/) of the Robotics Institute at CMU. I am interested in how locomotion control can be transferred from the brain to the spinal cord, and how the spinal circuitry learns. This spinal controller, essentially a network of feedback loops, can be used in applications such as control of prostheses, and potentially humanoids.
+I am working with the Legged Systems Group, advised by [Prof. Hartmut Geyer](https://www.cs.cmu.edu/~hgeyer/) of the Robotics Institute at CMU. I am interested in how locomotion control can be transferred from the brain to the spinal cord, and how the spinal circuitry learns. This spinal controller, essentially a network of feedback loops, can be used in applications such as control of prostheses, and potentially humanoids. 
 
 Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at  [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on things related to Fluid Mechanics and [Mechatronics](https://people.iiti.ac.in/~palaniia/). 
 

@@ -1,80 +1,35 @@
 ---
 layout: page
-title: Portfolio
+title: projects
 permalink: /projects/
 description:  
 nav: true
 nav_order: 3
-display_categories:
-horizontal: false
 ---
 
-<h2 id="projects">Projects</h2>
 <!-- pages/projects.md -->
 <div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-
-
-<!-- Display projects without categories -->
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
+<ul style="list-style-type: none; padding-left: 0; margin-top: 1rem;">
+{% for project in sorted_projects %}
+  <li style="margin-bottom: 2rem;">
+    <h3 style="margin-bottom: 0.2rem;">
+      <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      {% if project.github %}
+      <a href="https://github.com/{{ project.github }}" target="_blank" title="View repository" style="font-size: 1.1rem; margin-left: 0.5rem; color: var(--global-theme-color);">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      {% endif %}
+    </h3>
+    <p style="margin-top: 0; color: var(--global-text-color-light);">{{ project.description }}</p>
+  </li>
+{% endfor %}
+</ul>
 
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
 </div>
 
-
-<!-- {% include bib_search.liquid %} -->
-
-<h2 class="publication-heading">Publications</h2>
-
-
+<h2 class="publication-heading">publications</h2>
 <div class="publications">
-
 {% bibliography %}
-
 </div>
