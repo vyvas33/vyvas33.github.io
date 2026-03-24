@@ -38,6 +38,11 @@ ninja.data = [{
           description: "A hopping model with one muscle",
           section: "Projects",handler: () => {
               window.location.href = "/projects/hopping_model/";
+            },},{id: "projects-locomimic",
+          title: 'LocoMimic',
+          description: "Learning to walk using reinforcement learning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/locomimic/";
             },},{id: "projects-muscle-model",
           title: 'Muscle Model',
           description: "An implementation of the Hill Type Muscle Model",
