@@ -7,7 +7,9 @@ category: work
 github: vyvas33/hopping_model
 ---
 
-A two segment hopping model using a single muscle based on [Positive force feedback in bouncing gaits?](https://doi.org/10.1098/rspb.2003.2454).
+This work employs a two-segment hopping model with a single extensor muscle to simulate vertical hopping. Hopping (and running) is characterized by alternating stance and flight phases. During stance, the leg is in contact with the ground and the muscles provide the force to propel the body off the ground. During the flight phase, the body moves under the influence of gravity. We represent the body as a point mass and the leg as a two-segment system, which are mass-less. 
+
+The muscle tendon complex (MTC) is modeled using the Hill Type Muscle Model. The MTC is composed of a contractile element (CE), a parallel passive element (PE) and a series elastic element (SEE). The activation of the muscle is controlled by a neural input $$STIM(t)$$. The input consists of a constant stimulation bias and a feedback component. In this work, we use the positive force feedback with delay (Geyer et al., 2003).
 
 ![Hopping Animation](https://raw.githubusercontent.com/vyvas33/hopping_model/main/Videos/hopping_animation.gif)
 
