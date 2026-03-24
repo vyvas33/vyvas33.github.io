@@ -17,7 +17,7 @@ The video below shows the trained SAC policy alongside the reference motion it i
 
 <div class="row mt-3 justify-content-center">
     <div class="col-sm-8 col-md-6 mt-3 mt-md-0 mx-auto text-center d-flex justify-content-center">
-        {% include video.liquid path="assets/video/sac_tracking_v2_1M_steps.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+        <video src="{{ 'assets/video/sac_tracking_v2_1M_steps.mp4' | relative_url }}" class="img-fluid rounded z-depth-1" controls autoplay loop muted playsinline></video>
     </div>
 </div>
 
