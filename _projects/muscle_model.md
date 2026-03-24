@@ -2,7 +2,7 @@
 layout: page
 title: Muscle Model
 description: "An implementation of the Hill Type Muscle Model"
-importance: 2
+importance: 3
 category: work
 github: vyvas33/muscle_model
 ---

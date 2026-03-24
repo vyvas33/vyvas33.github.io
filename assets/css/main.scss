@@ -38,3 +38,14 @@ $max-content-width: {{ site.max_width }};
   display: block;
   margin: 1rem auto;
 }
+
+// Justify paragraph text globally
+p {
+  text-align: justify;
+}
+
+// Center video embeds globally
+video {
+  display: block;
+  margin: 0 auto;
+}
