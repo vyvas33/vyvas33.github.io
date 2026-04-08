@@ -2,7 +2,7 @@
 layout: page
 title: Articulated Mobile Robot
 description: A modular center-articulated multi-modal robot for complex environments
-importance: 3
+importance: 4
 category: work
 github: vyvas33/articulated_mobile_robot
 ---
