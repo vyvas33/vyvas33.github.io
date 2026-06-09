@@ -222,8 +222,8 @@ terser:
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Vyvaswath]
-  first_name: [K. A.]
+  last_name: [Vyvaswath, Kalva]
+  first_name: [K. A., Vyvaswath]
 
   style: apa
   locale: en
