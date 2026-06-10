@@ -31,8 +31,6 @@ Hey! I’m Vyvaswath, a mechanical engineering graduate student exploring the wo
 
 I am working with the [Legged Systems Group](https://sites.google.com/andrew.cmu.edu/ri-lsg/), advised by [Prof. Hartmut Geyer](https://www.cs.cmu.edu/~hgeyer/) of the Robotics Institute at CMU. I am interested in powered lower-limb assistive robot control.
 
-. 
-
 Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at  [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on things related to Fluid Mechanics and [Mechatronics](https://people.iiti.ac.in/~palaniia/). 
 
 Outside of academics, I enjoy making and performing music, especially Indian fusion and progressive rock.
