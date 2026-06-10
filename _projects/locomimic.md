@@ -26,6 +26,15 @@ Every SAC run followed the same pattern: reward peaks, collapses, and never reco
 
 PPO still evaluated higher after the same 800M steps, but the reward was tuned for PPO from the start. At single-environment scale SAC was actually the stronger of the two; the point of MeanSAC was to keep that working once I scaled up.
 
+<div class="row justify-content-sm-center mt-3">
+    <div class="col-sm-10 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/sac_vs_meansac.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Vanilla SAC (red) collapses mid-training around 200M steps and never fully recovers. MeanSAC (purple) holds a higher, stable return and episode length across 800M steps.
+</div>
+
 <div class="row mt-3 justify-content-center">
     <div class="col-sm-4 mt-3 mt-md-0 text-center">
         {% include figure.liquid loading="eager" path="assets/img/ppo.gif" class="img-fluid rounded z-depth-1" caption="PPO" %}
