@@ -2,7 +2,7 @@
 layout: page
 title: Hopping Model
 description: "A hopping model with one muscle "
-importance: 2
+importance: 4
 category: work
 github: vyvas33/hopping_model
 ---

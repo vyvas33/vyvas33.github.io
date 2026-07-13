@@ -2,14 +2,14 @@
 layout: page
 title: LocoMimic
 description: "Learning to walk using reinforcement learning."
-importance: 1
+importance: 2
 category: work
 github: vyvas33/loco_mimic
 ---
 
 <p class="text-muted" style="font-size: 0.9rem;">
 Introduction to Robot Learning course project | Carnegie Mellon University | Spring 2026<br>
-<strong>My focus:</strong> off-policy RL &nbsp;|&nbsp; <strong>Stack:</strong> MuJoCo, mjlab, Unitree G1
+<strong>My focus:</strong> off-policy RL
 </p>
 
 > On a single environment, SAC matched and beat PPO at equal environment interactions, but scaling to thousands of parallel environments made it collapse mid-training. With a combination of fixes, **MeanSAC** eliminated the collapses and raised mean return from 13.3 to 30.0.

@@ -2,7 +2,7 @@
 layout: page
 title: Gesture Controlled SMA Actuated Robotic Hand
 description: A robotic hand actuated by shape memory alloy springs and controlled using a gesture glove.
-importance: 5
+importance: 6
 category: work
 github: vyvas33/gesture_controlled_sma_robotic_hand
 ---
