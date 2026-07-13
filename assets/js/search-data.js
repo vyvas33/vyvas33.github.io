@@ -48,6 +48,11 @@ ninja.data = [{
           description: "An implementation of the Hill Type Muscle Model",
           section: "Projects",handler: () => {
               window.location.href = "/projects/muscle_model/";
+            },},{id: "projects-powered-knee-ankle-prosthesis",
+          title: 'Powered Knee-Ankle Prosthesis',
+          description: "Low-level hardware control for a powered lower-limb prosthesis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/prosthesis/";
             },},{id: "projects-heat-transfer-characteristics-of-synthetic-jets",
           title: 'Heat Transfer Characteristics of Synthetic Jets',
           description: "An experimental study of elliptic synthetic jets with high aspect ratios",
