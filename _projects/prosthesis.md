@@ -18,12 +18,12 @@ Legged Systems Group, Robotics Institute | Carnegie Mellon University | Ongoing<
 
 Amputees suffer from increased energy consumption, and this is aggravated by mechanically passive prostheses. Active prostheses can help by performing positive work while walking. However, high-level decisions are needed to control the behavior of the prosthesis. These high-level control decisions are dependent on the state of the robotic leg, as well as the human's intent. 
 
-In this work, I develop the control stack for the prosthesis, from reading raw sensor frames to commanding the motors. I implement two high-level controllers, the bioinspired **Neuromuscular Control** for the stance phase of walking, and the Minimum Jerk Control for the swing phase. The controllers depend on the hip cue of the human in some stages of the controller. Here, I implement an **Error State Kalman Filter** to estimate the hip angle by fusing two IMUs. Finally, I test the controllers on an instrumented treadmill and tune them to the human's comfort.
+In this work, I develop the control stack for the prosthesis, from reading raw sensor frames to commanding the motors. I implement two high-level controllers, the bioinspired **Neuromuscular Control** for the stance phase of walking, and the Minimum Jerk Control for the swing phase. The high level controller consumes the prosthesis state, as well as human hip features to make control descisions. Here, I implement an **Error State Kalman Filter** to estimate the hip angle and position by fusing two IMUs. Finally, I test the controllers on an instrumented treadmill and tune them to the human's comfort.
 
 ### Hardware Overview
 The leg itself was designed and built in earlier work in the lab [1]. The motors on the leg are controlled by Elmo motor drives, one each for the
 knee and ankle. Ground reaction sensors and two encoders
-per joint feed a custom MCU. The drives and the MCU talk to a Jetson Orin over EtherCAT.
+per joint feed a custom MCU. The drives and the MCU talk to a Jetson Orin over EtherCAT protocol.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
