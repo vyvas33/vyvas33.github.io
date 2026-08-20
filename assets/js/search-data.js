@@ -48,9 +48,9 @@ ninja.data = [{
           description: "An implementation of the Hill Type Muscle Model",
           section: "Projects",handler: () => {
               window.location.href = "/projects/muscle_model/";
-            },},{id: "projects-powered-knee-ankle-prosthesis",
-          title: 'Powered Knee-Ankle Prosthesis',
-          description: "Low-level hardware control for a powered lower-limb prosthesis",
+            },},{id: "projects-robotic-lower-limb-prosthesis-control",
+          title: 'Robotic Lower-Limb Prosthesis Control',
+          description: "Sensing, estimation and control for a powered knee-ankle prosthesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/prosthesis/";
             },},{id: "projects-heat-transfer-characteristics-of-synthetic-jets",
