@@ -2,7 +2,7 @@
 layout: about
 title: About 
 permalink: /
-subtitle: Grad Student | Mechanical Engineering - Research @ CMU
+subtitle: legged robotic systems @ cmu
 
 
 profile:
@@ -27,12 +27,8 @@ social: true # includes social icons at the bottom of the page
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
-Hey! I’m Vyvaswath, a graduate student exploring the world of robotics and controls at [Carnegie Mellon University](https://www.cmu.edu/).
+Hey! I’m Vyvaswath. I work on control for powered lower-limb prostheses at the [Legged Systems Group](https://sites.google.com/andrew.cmu.edu/ri-lsg/), advised by [Prof. Hartmut Geyer](https://www.cs.cmu.edu/~hgeyer/) at [Carnegie Mellon University](https://www.cmu.edu/)’s Robotics Institute.
 
-I am working with the [Legged Systems Group](https://sites.google.com/andrew.cmu.edu/ri-lsg/), advised by [Prof. Hartmut Geyer](https://www.cs.cmu.edu/~hgeyer/) of the Robotics Institute at CMU. I am interested in powered lower-limb assistive robot control. 
-
-
-
-Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at  [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on things related to Fluid Mechanics and [Mechatronics](https://people.iiti.ac.in/~palaniia/). 
+Previously, at [Indian Institute of Science](https://iisc.ac.in), I worked on the design and modeling of an articulated mobile robot for ground and pipe inspection. I completed my undergraduate studies at [Indian Institute of Technology, Indore](https://iiti.ac.in), where I worked on fluid mechanics and [mechatronics](https://people.iiti.ac.in/~palaniia/).
 
 Outside of academics, I enjoy making and performing music, especially Indian fusion and progressive rock.
