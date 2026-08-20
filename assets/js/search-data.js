@@ -33,21 +33,16 @@ ninja.data = [{
           description: "A robotic hand actuated by shape memory alloy springs and controlled using a gesture glove.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/gesture_controlled_sma_robotic_hand/";
-            },},{id: "projects-hopping-model",
-          title: 'Hopping Model',
-          description: "A hopping model with one muscle",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/hopping_model/";
             },},{id: "projects-locomimic",
           title: 'LocoMimic',
           description: "Learning to walk using reinforcement learning.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/locomimic/";
-            },},{id: "projects-muscle-model",
-          title: 'Muscle Model',
-          description: "An implementation of the Hill Type Muscle Model",
+            },},{id: "projects-neuromuscular-models",
+          title: 'Neuromuscular Models',
+          description: "Hill type muscle models and reflex driven hopping",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/muscle_model/";
+              window.location.href = "/projects/neuromuscular_models/";
             },},{id: "projects-robotic-lower-limb-prosthesis-control",
           title: 'Robotic Lower-Limb Prosthesis Control',
           description: "Sensing, estimation and control for a powered knee-ankle prosthesis",
