@@ -10,7 +10,7 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -40,7 +40,7 @@ ninja.data = [{
               window.location.href = "/projects/locomimic/";
             },},{id: "projects-neuromuscular-models",
           title: 'Neuromuscular Models',
-          description: "Hill type muscle models and reflex driven hopping",
+          description: "Hill-type muscle models and reflex-driven hopping",
           section: "Projects",handler: () => {
               window.location.href = "/projects/neuromuscular_models/";
             },},{id: "projects-robotic-lower-limb-prosthesis-control",
@@ -73,6 +73,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/vyvaswath", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/vyvas33", "_blank");
         },
       },{
       id: 'light-theme',
