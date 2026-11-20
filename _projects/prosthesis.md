@@ -16,14 +16,24 @@ _styles: |
 Legged Systems Group, Robotics Institute | Carnegie Mellon University | Ongoing<br>
 </p>
 
-Amputees suffer from increased energy consumption, and this is aggravated by mechanically passive prostheses. Active prostheses can help by performing positive work while walking. However, high-level decisions are needed to control the behavior of the prosthesis. These high-level control decisions are dependent on the state of the robotic leg, as well as the human's intent. 
+Amputees spend more energy walking than able-bodied people, and mechanically passive prostheses make this worse. Active prostheses can help by performing positive work while walking. But high-level decisions are needed to control the behavior of the prosthesis, and these depend on the state of the robotic leg as well as the human's intent. The goal of this project is to build that controller for a powered knee-ankle prosthesis, so that it works across walking speeds and feels comfortable to the user.
 
-In this work, I develop the control stack for the prosthesis, from reading raw sensor frames to commanding the motors. I implement two high-level controllers, the bioinspired **Neuromuscular Control** for the stance phase of walking, and the Minimum Jerk Control for the swing phase. The high level controller consumes the prosthesis state, as well as human hip features to make control descisions. Here, I implement an **Error State Kalman Filter** to estimate the hip angle and position by fusing two IMUs. Finally, I test the controllers on an instrumented treadmill and tune them to the human's comfort.
+<div class="row justify-content-sm-center">
+    <div class="col-12 mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/prosthesis_walking_v2.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true %}
+    </div>
+</div>
+<div class="caption">
+    Walking on the treadmill
+</div>
 
-### Hardware Overview
-The leg itself was designed and built in earlier work in the lab [1]. The motors on the leg are controlled by Elmo motor drives, one each for the
-knee and ankle. Ground reaction sensors and two encoders
-per joint feed a custom MCU. The drives and the MCU talk to a Jetson Orin over EtherCAT protocol.
+### Design
+
+I implement two high-level controllers: the bioinspired **Neuromuscular Control** for the stance phase of walking, and **Minimum Jerk Control** for the swing phase. The high-level controller consumes the prosthesis state as well as human hip features to make control decisions. To get those hip features, I implement an **Error State Kalman Filter** that estimates the hip angle and position by fusing two IMUs.
+
+### Hardware
+
+The leg itself was designed and built in earlier work in the lab [1]. The motors on the leg are controlled by Elmo motor drives, one each for the knee and ankle. Ground reaction sensors and two encoders per joint feed a custom MCU. The drives and the MCU talk to a Jetson Orin over EtherCAT, which I built on PySOEM, a Python library. Raw sensor data goes into the state estimator, the estimator's output goes to the high-level controller, and the low-level controller uses that to command the motors.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -34,17 +44,7 @@ per joint feed a custom MCU. The drives and the MCU talk to a Jetson Orin over E
      CMU Powered Prosthesis Leg
 </div>
 
-The EtherCAT interface is built on PySOEM, a Python library. Raw sensor
-data is fed into a state estimator, which outputs the state used by the
-high-level controller, the low-level controller then uses that output to
-command the motors.
-
-Both the knee and ankle joints are series-elastic, which means the joint and the motor are
-connected through a spring, which lets us measure torque for free, from
-the spring deflection rather than a dedicated torque sensor. The low-level
-controller implemented here is velocity-based SEA control. It computes a velocity
-command and a feedforward torque from a dynamic model of the rotor, and
-sends the velocity command to the drives in velocity mode.
+Both joints are series-elastic: the joint and the motor are connected through a spring, which lets us measure torque for free, from the spring deflection rather than a dedicated torque sensor. The low-level controller I implemented is velocity-based SEA control. It computes a velocity command and a feedforward torque from a dynamic model of the rotor, and sends the velocity command to the drives in velocity mode.
 
 <!-- <div class="row justify-content-sm-center">
     <div class="col-12 mt-3 mt-md-0">
@@ -56,32 +56,22 @@ sends the velocity command to the drives in velocity mode.
 </div> -->
 
 ### State Estimation
-The pose of the human leg (thigh) is estimated by an Error State Kalman Filter [2, 3] that fuses two IMUs and the joint encoders. The two IMUs are placed on the prosthesis foot and the human thigh. The foot IMU is corrected using ZUPT (Zero-velocity update) [4, 5] and the thigh IMU is corrected by propagating the foot IMU's readings through forward kinematics, using the joint angles read from the encoders.
 
-### Control 
-The Neuromuscular controller [6] is a model based controller that computes stance phase joint torques by simulating muscles and neural pathways. It was first applied to a powered prosthesis on this platform in [1]. We simulate three muscle groups, namely Vasti, Gastrocnemius and the Soleus group. Based on the current joint angles and the hip angle, the muscles generate forces, from which desired torques are computed through the moment arm. The torques are then tracked by the velocity based SEA control.  
+The pose of the human thigh is estimated by an Error State Kalman Filter [2, 3] that fuses two IMUs and the joint encoders. The IMUs sit on the prosthesis foot and the human thigh. The foot IMU is corrected using ZUPT (zero-velocity update) [4, 5], and the thigh IMU is corrected by propagating the foot IMU's readings through forward kinematics, using the joint angles from the encoders.
 
-During swing, the controller computes minimum jerk reference trajectories for the knee and the ankle, such that the jerk (the rate of change of acceleration) is minimum across the trajectory. If we use the Euler-Lagrange equation to compute the minimum, we realize that the trajectory is just a quintic polynomial, so it costs almost nothing in real time to compute the trajectory. 
+### Control
 
-### Testing 
+The Neuromuscular controller [6] is model-based and computes stance-phase joint torques by simulating muscles and neural pathways. It was first applied to a powered prosthesis on this platform in [1]. We simulate three muscle groups: the Vasti, Gastrocnemius and Soleus. From the current joint angles and the hip angle, the muscles generate forces, and the moment arms turn those forces into desired torques. The velocity-based SEA control then tracks the torques.
 
-We test the controllers by walking with the prosthesis on a split-belt instrumented treadmill. We use a bypass socket so able-bodied individuals can use the prosthesis and test the controllers.
+During swing, the controller computes minimum-jerk reference trajectories for the knee and ankle, where jerk is the rate of change of acceleration. If we use the Euler-Lagrange equation to find the minimum, the trajectory turns out to be a quintic polynomial, so it costs almost nothing to compute in real time.
 
-<div class="row justify-content-sm-center">
-    <div class="col-12 mt-3 mt-md-0">
-        {% include video.liquid path="assets/video/prosthesis_walking.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true loop=true muted=true %}
-    </div>
-</div>
-<div class="caption">
-    Walking on the treadmill
-</div>
+### Evaluation
 
+I tested the Error State Kalman Filter offline against previously logged data before putting it on the leg. I then tested the controllers by walking with the prosthesis on a split-belt instrumented treadmill. A bypass socket lets able-bodied individuals use the prosthesis. The control is independent of walking speed, and I tested it at speeds from 0.7 to 1.3 m/s. The most common source of control errors was the state machine that switches between swing and stance based on contact.
 
-### What Next?
+### Conclusion and What Next?
 
-A common source of control errors I encountered during testing was the state machine that switches between swing and stance based on contact. To avoid these switches, I want to develop an end-to-end controller that does not rely on finite states.
-
-Reinforcement learning is a promising way to learn such a controller, but it needs an accurate model of the human and prosthesis system to learn from. So I'm exploring how we can simulate that system, learn the control policy in simulation, and deploy it zero-shot without extensive tuning on hardware.
+The controllers work on hardware across the speeds I tested. However, they mainly work for level walking and inclines. I want to develop an end-to-end controller that works across different locomotion modes. Reinforcement learning in simulation is a promising way to learn such a controller, but it needs an accurate model of the human and prosthesis system to learn from. So I'm exploring how we can simulate that system, learn the control policy in simulation, and deploy it zero-shot without extensive tuning on hardware.
 
 <hr>
 
