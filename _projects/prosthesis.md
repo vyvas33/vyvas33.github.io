@@ -77,7 +77,7 @@ We test the controllers by walking with the prosthesis on a split-belt instrumen
 </div>
 
 
-### What next?
+### What Next?
 
 A common source of control errors I encountered during testing was the state machine that switches between swing and stance based on contact. To avoid these switches, I want to develop an end-to-end controller that does not rely on finite states.
 

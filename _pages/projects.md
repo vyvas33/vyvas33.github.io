@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description:  
 nav: true
@@ -29,7 +29,7 @@ nav_order: 3
 
 </div>
 
-<h2 class="publication-heading">publications</h2>
+<h2 class="publication-heading">Publications</h2>
 <div class="publications">
 {% bibliography %}
 </div>

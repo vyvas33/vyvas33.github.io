@@ -10,7 +10,6 @@
 email: vyvas2002@gmail.com # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-# github_username: # your GitHub user name
 # gitlab_username: # your GitLab user name
 # ieee_id: # your ieeexplore.ieee.org/author/id
 #inspirehep_id: 1010907 # Inspire HEP author ID
@@ -21,6 +20,8 @@ instagram_id: vyvaswath_ # your instagram id
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
 linkedin_username: vyvaswath # your LinkedIn user name
+github_username: vyvas33 # your GitHub user name
+# scholar_userid: # TODO: your Google Scholar ID (the user=... part of your profile URL)
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
 # orcid_id: # your ORCID ID
@@ -30,7 +31,6 @@ linkedin_username: vyvaswath # your LinkedIn user name
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
 #rss_icon: true # set to true to show the RSS icon
-#scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id

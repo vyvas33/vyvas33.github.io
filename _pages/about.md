@@ -2,12 +2,12 @@
 layout: about
 title: About 
 permalink: /
-subtitle: legged robotic systems @ cmu
+subtitle: Control and robot learning for legged systems @ CMU
 
 
 profile:
   align: right
-  image: vyvaswath_pic3.JPG
+  image: vyvaswath_pic4.jpg
   image_circular: true # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
