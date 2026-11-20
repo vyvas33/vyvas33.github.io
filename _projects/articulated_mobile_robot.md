@@ -8,6 +8,8 @@ github: vyvas33/articulated_mobile_robot
 related_publications: true
 ---
 
+**My role:** I redesigned the robot so it moves reliably in inclined pipes. I also modeled its kinematics and dynamics, simulated them in MATLAB, and prototyped the robot.
+
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/assembled_robot_nobg.png" title="assembled robot" class="img-fluid rounded z-depth-0" %}
@@ -17,17 +19,27 @@ related_publications: true
     The assembled robot
 </div>
 
-Pipeline inspection robots are typically built for one environment: inside a pipe or on open ground. This robot does both. The goal was a single platform that could traverse straight pipes, navigate bends and junctions, and then drive across uneven terrain without swapping hardware.
+Pipelines carrying gas, water and sewage need constant monitoring for clogging, aging, cracks and corrosion. They often run underground or inside complex infrastructure, which makes them hard and costly to inspect from outside. Inspection robots can reach places people can't, but most are built for just one environment: inside a pipe or on open ground. Many also struggle with bends, T-junctions and vertical sections. The goal of this project was one modular robot that can inspect pipes with bends and then drive over uneven terrain, without swapping hardware.
 
-The robot consists of two driven modules, a front (base) module and a rear (trailer) module, connected by a novel 2-DoF joint actuated through a bevel-gear differential driven by two servo motors. Steering on the ground is achieved by articulating the two modules about the vertical axis, exactly the way center-articulated vehicles like LHD machines turn, while the joint's pitch mode lets the robot follow vertical bends and climb over obstacles inside pipes. A SolidWorks Motion study showed the joint demands roughly 60 kg-cm of peak torque per motor; the earlier 50 kg-cm servos fell short and caused unstable articulation on inclines, so they were replaced with 120 kg-cm Waveshare RSBL120-24 servos with magnetic encoders for closed-loop position feedback.
+### Design
 
-Each leg carries a wall-press mechanism built around a pantograph linkage with a spring and a lead-screw active adjustment. The spring handles small variations in pipe diameter passively; when the normal force exceeds acceptable limits, the motor-driven lead screw engages to actively reposition the legs. This lets the robot maintain traction in pipes of varying diameter without operator input.
+The robot has two driven modules, a base and a trailer, connected by a novel 2-DoF joint. A bevel-gear differential driven by two servo motors actuates the joint. On the ground, the robot steers by articulating about the vertical axis, like center-articulated Load-Haul-Dump vehicles. The pitch mode lets it follow bends and climb obstacles inside pipes.
 
-For ground locomotion, the inter-wheel distance needs to be wider than the in-pipe configuration to maintain stability. A configurable wheel distance mechanism handles this: each omnidirectional wheel rides on a hexagonal shaft through a linear bearing, so the shaft's cross-section couples wheel rotation while a lead screw slides the wheel along it, expanding or contracting the support polygon on demand. The drive itself started out using worm gears, but experiments revealed significant torque losses; these were replaced with a spur-gear transmission, and a SolidWorks Motion study of vertical pipe traversal (showing a ~2 Nm requirement) led to selecting 40 kg-cm Waveshare drive motors.
+In pipes, a wall-press mechanism keeps the wheels pushed against the walls. It uses a pantograph linkage with a spring and a lead screw. The spring absorbs small changes in pipe diameter, and when the normal force goes beyond acceptable limits, the lead screw adjusts the legs actively. On the ground, the robot needs a wider stance to stay stable. A configurable wheel distance mechanism slides each omnidirectional wheel along a hexagonal shaft to widen or narrow the support polygon.
 
-Kinematic, dynamic, and static force models of the robot were developed. The kinematics treat the platform as a base–trailer pair coupled by the articulation angle, and the dynamics were derived using the Lagrangian formulation, reduced to eliminate the constraint multipliers, and studied in simulation across free-response, wheel-torque, and damped joint-actuation cases. The static model relates wall-press force to spring compression, friction, and rolling resistance. The prototype was fabricated using a combination of 3D printing and precision machining and tested across straight pipes, bends, and uneven ground, demonstrating robust mobility and adaptable configuration in all three environments.
+Testing the first design showed three problems, which drove most of my redesign:
 
-The control and localization side of this platform is detailed in our journal paper {% cite paper %}, and the full design report is available <a href="{{ 'assets/pdf/Report.pdf' | relative_url }}" target="_blank">here</a>.
+- **Worm gears lost too much torque.** I replaced them with a spur gear transmission. A SolidWorks Motion study of vertical pipe traversal showed the wheels needed about 2 Nm, so I chose 40 kg-cm Waveshare motors and redesigned the leg module around them.
+- **The joint servos were too weak.** The study showed the joint needs about 60 kg-cm of peak torque per motor. The original 50 kg-cm servos caused unstable articulation on inclines, so I replaced them with 120 kg-cm Waveshare RSBL120-24 servos with magnetic encoders, and redesigned the joint housing.
+- **Wheels had to rotate and slide in the same compact leg.** The hexagonal shaft solved this, because its cross-section carries the wheel's rotation while a lead screw moves the wheel along it.
+
+### Modeling and Simulation
+
+I developed kinematic, dynamic and static force models. The kinematics treat the robot as a base and trailer coupled by the articulation angle. I derived the dynamics with the Lagrangian method and simulated them in MATLAB across four cases: free response, wheel torque with and without joint damping, and combined wheel and joint actuation under damping. Across these torque and damping conditions, the simulated articulation was smooth and controlled. The static model relates the wall-press force to spring compression, friction and rolling resistance.
+
+### Testing and Evaluation
+
+I fabricated the prototype with 3D printing and precision machining, and operated it by radio teleoperation. I tested it in an inclined straight pipe with a 400 mm inner diameter, through a 90-degree bend, and on flat and uneven ground. In all three, it moved responsively and stably, and the joint articulated efficiently.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-10 mt-3 mt-md-0">
@@ -37,3 +49,7 @@ The control and localization side of this platform is detailed in our journal pa
 <div class="caption">
     The robot traversing in-pipe and on-ground environments (3&times; speed).
 </div>
+
+### Conclusion
+
+The robot works as a single platform for both pipes and open ground. The control and localization work is in our 2026 journal paper {% cite paper %}, and the full design report is available <a href="{{ 'assets/pdf/Report.pdf' | relative_url }}" target="_blank">here</a>. The wall-press mechanism has a load sensor, so the next step is real-time force feedback with slip detection, to regulate normal force and driving torque and cut wheel slip.
